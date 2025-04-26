@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE, IU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        .inter {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link:hover {
+            color: #a7f3d0;
+            transform: translateY(-2px);
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        #header {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        #header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .program-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .student-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body class="inter bg-gray-100">
+    <header id="header" class="bg-blue-600 text-white py-4 md:py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center text-xl md:text-2xl font-semibold">
+                    <span class="mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                            <path d="M16 17l-4 4-4-4M7 9h10v8h-2v-6H9v6H7z"></path>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        </svg>
+                    </span>
+                    CSE, IU
+                </a>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#home" class="nav-link hover:text-blue-200 transition duration-300">Home</a></li>
+                        <li><a href="#about" class="nav-link hover:text-blue-200 transition duration-300">About</a></li>
+                        <li><a href="#academics" class="nav-link hover:text-blue-200 transition duration-300">Academics</a></li>
+                        <li><a href="#admission" class="nav-link hover:text-blue-200 transition duration-300">Admission</a></li>
+                        <li><a href="#research" class="nav-link hover:text-blue-200 transition duration-300">Research</a></li>                     
+                        <li><a href="#news" class="nav-link hover:text-blue-200 transition duration-300">News</a></li>
+                        <li><a href="#contact" class="nav-link hover:text-blue-200 transition duration-300">Contact</a></li>
+                        <li><a href="https://www.chatbase.co/chatbot-iframe/FGo-y8xMvtbeoo_pfHL4k" target="_blank" class="nav-link hover:text-blue-200 transition duration-300">CSE Assist</a></li>
+                    </ul>
+                </nav>
+                <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                        <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="#home" class="block text-lg text-white hover:text-blue-200 transition duration-300">Home</a></li>
+                    <li><a href="#about" class="block text-lg text-white hover:text-blue-200 transition duration-300">About</a></li>
+                    <li><a href="#academics" class="block text-lg text-white hover:text-blue-200 transition duration-300">Academics</a></li>
+                     <li><a href="#admission" class="block text-lg text-white hover:text-blue-200 transition duration-300">Admission</a></li>
+                    <li><a href="#research" class="block text-lg text-white hover:text-blue-200 transition duration-300">Research</a></li>
+                    <li><a href="#students" class="block text-lg text-white hover:text-blue-200 transition duration-300">Students</a></li>
+                    <li><a href="#news" class="block text-lg text-white hover:text-blue-200 transition duration-300">News</a></li>
+                    <li><a href="#contact" class="block text-lg text-white hover:text-blue-200 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="flex-grow">
+        <section id="home" class="bg-gradient-to-br from-blue-100 to-purple-100 py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">Welcome to CSE, IU</h1>
+                <p class="text-lg text-gray-700 mb-8">Empowering the Future through Innovation and Education.
+                    
+                </p>
+                <a href="https://www.chatbase.co/chatbot-iframe/FGo-y8xMvtbeoo_pfHL4k" target="_blank" class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300 text-lg">Chat with CSE Assist</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-800 text-center mb-8">About Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-gray-700 text-lg">
+                            The Department of Computer Science and Engineering at Islamic University, Kushtia, is dedicated to providing a world-class education in the field of computer science. We strive to foster a learning environment that encourages innovation, critical thinking, and problem-solving skills. Our experienced faculty and state-of-the-art facilities ensure that students receive the best possible preparation for their future careers.
+                        <br> The Department of Computer Science and Engineering (CSE), Islamic University, Kushtia is one of the leading departments in Bangladesh. The campus is located at Shantidanga-Dulalpur, beside the Kushtia-Khulna highway and about 24 kms south and 22 kms north of respectively from the Kushtia and Jhenidah district-towns. The Department is primarily committed to serving students who have set a goal of obtaining a degree in computer science and engineering.
+                        </p>
+                        <p></p>
+                    </div>
+                    <div class="text-center">
+                        <img src="E:\Chatbot project\rally.jpg" alt="About CSE, IU" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="academics" class="bg-gray-100 py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-800 text-center mb-8">Academics</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 program-card">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Undergraduate Program</h3>
+                        <p class="text-gray-700 text-lg">
+                            We offer a comprehensive undergraduate program in Computer Science and Engineering, designed to provide students with a strong foundation in the core concepts of computer science.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 program-card">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Graduate Program</h3>
+                        <p class="text-gray-700 text-lg">
+                            Our graduate programs provide advanced knowledge and research opportunities for students looking to specialize in specific areas of computer science.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 program-card">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Research</h3>
+                        <p class="text-gray-700 text-lg">
+                            The department is actively involved in cutting-edge research in various fields of computer science, contributing to the advancement of knowledge and technology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="admission" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-800 text-center mb-8">Admission</h2>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <p class="text-gray-700 text-lg">
+                        Information regarding the admission process, requirements, and deadlines can be found here.  We welcome bright and motivated students to join our CSE family.
+                    </p>
+                    <a href="#" class="mt-4 inline-block bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-700 transition duration-300 text-lg">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="bg-gray-100 py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-800 text-center mb-8">Research</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Artificial Intelligence</h3>
+                        <p class="text-gray-700 text-lg">
+                            Explore our research in machine learning, deep learning, natural language processing, and computer vision.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Cybersecurity</h3>
+                        <p class="text-gray-700 text-lg">
+                           Our research in cybersecurity focuses on protecting computer systems and networks from theft, damage, or unauthorized access.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Data Science</h3>
+                        <p class="text-gray-700 text-lg">
+                            We conduct research on data mining, big data analysis, and database systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section id="news" class="bg-gray-100 py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-800 text-center mb-8">Latest News</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300 news-card">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">New Research Published</h3>
+                        <p class="text-gray-600 mb-2">Date: 2024-07-28</p>
+                        <p class="text-gray-700 text-lg">
+                            A new research paper on deep learning has been published by our faculty members.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300 news-card">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Seminar on AI</h3>
+                        <p class="text-gray-600 mb-2">Date: 2025-05-25</p>
+                        <p class="text-gray-700 text-lg">
+                            A seminar on Artificial Intelligence will be held on August 10, 2024.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-blue-100 py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-800 text-center mb-8">Contact Us</h2>
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <p class="text-gray-700 text-lg text-center">
+                        Department of Computer Science and Engineering<br>
+                        Islamic University, Kushtia<br>
+                        Email: chairman@cse.iu.ac.bd<br>
+                        Phone: +880-71-74901-12 Ext. 2313
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2024 CSE, IU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="FGo-y8xMvtbeoo_pfHL4k";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+        </script>
+</body>
+</html>
